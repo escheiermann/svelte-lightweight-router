@@ -1,5 +1,9 @@
 import { navigate } from "./navigate";
 
+/**
+ * Checks if route can be accessed.
+ * @returns true if route can be accessed.
+ */
 export function guardRoute(route) {
     if (hasGuard(route)) {
         for (let i = 0; i < route.guards.length; i++) {
