@@ -14,5 +14,5 @@ export function guardRoute(route) {
 }
 
 function hasGuard(route) {
-    return route.guards !== undefined && route.guards.length > 0;
+    return route.guards && route.guards.length > 0;
 }
