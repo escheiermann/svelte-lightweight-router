@@ -12,10 +12,18 @@ export function defineRoutes(routes) {
     setRoute();
 }
 
+/**
+ * Returns the route for a path.
+ * @param path to the page (e.g. "home").
+ * @returns route for the specified path.
+ */
 export function getRoute(path) {
     return allRoutes.filter(route => route.path === path)[0];
 }
 
+/**
+ * Sets the route for the current page.
+ */
 export function setRoute(event) { 
     const newRoute = getRoute(location.hash.substring(1));
     if (newRoute && guardRoute(newRoute)) {
