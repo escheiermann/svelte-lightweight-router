@@ -1,6 +1,15 @@
 # svelte-lightweight-router
 A lightweight client-side router with guards for the Svelte framework.
 
+# Getting started
+
+## Installing
+
+To add the lightweight router to your project run:
+```
+npm install svelte-lightweight-router
+```
+
 ## Setup
 
 To setup the lightweight router, you first need to define a array of *routes*, containing all pages of your application:
@@ -21,11 +30,21 @@ Each *route* consists of:
 Then you need to provide the routes to the lightweight router:
 
 ```javascript
-import * as Lightweightrouter from "svelte-lightweight-router";
+import { defineRoutes } from "svelte-lightweight-router";
 
 ...
 
-Lightweightrouter.defineRoutes(routes);
+defineRoutes(routes);
+```
+
+Last, import the `Router` and display it in your document:
+
+```html
+<script>
+  import Router from "svelte-lightweight-router";
+</script>
+
+<Router />
 ```
 
 ## Navigating between pages

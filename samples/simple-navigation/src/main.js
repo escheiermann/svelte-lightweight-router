@@ -1,4 +1,4 @@
-import * as Light from "../../../src/index";
+import { defineRoutes } from "svelte-lightweight-router";
 import App from "./App.svelte";
 import Home from "./Home.svelte";
 import Legal from "./Legal.svelte";
@@ -10,7 +10,7 @@ var routes = [
 	{path: "privacy", component: Privacy},
 ];
 
-Light.defineRoutes(routes);
+defineRoutes(routes);
 
 var app = new App({
 	target: document.body

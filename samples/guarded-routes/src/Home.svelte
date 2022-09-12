@@ -1,5 +1,5 @@
 <script>
-import { navigate } from "../../../src";
+import { navigate } from "svelte-lightweight-router";
 
 import { loggedIn } from "./auth";
     function logout() {

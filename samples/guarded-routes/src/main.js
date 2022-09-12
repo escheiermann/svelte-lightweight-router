@@ -1,4 +1,5 @@
-import * as LightweightRouter from "../../../src/index";
+
+import { defineRoutes } from "svelte-lightweight-router";
 import App from "./App.svelte";
 import { authGuard } from "./auth-guard";
 import Home from "./Home.svelte";
@@ -9,7 +10,7 @@ var routes = [
 	{path: "login", component: Login}
 ];
 
-LightweightRouter.defineRoutes(routes);
+defineRoutes(routes);
 
 var app = new App({
 	target: document.body
