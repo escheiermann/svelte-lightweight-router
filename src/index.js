@@ -1,7 +1,7 @@
-import { setRoute } from "./routes";
+import { setRoute } from "./router/routes";
 
 window.onpopstate = setRoute;
 
-export { defineRoutes } from "./routes";
-export { navigate } from "./navigate";
-export { default as Router } from "./Router.svelte";
+export { defineRoutes } from "./router/routes";
+export { navigate } from "./router/navigate";
+export { default as Router } from "./router/Router.svelte";

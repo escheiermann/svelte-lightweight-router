@@ -1,5 +1,5 @@
-import { guardRoute } from "../src/guard";
-import { defineRoutes } from "../src/routes";
+import { guardRoute } from "../src/router/guard";
+import { defineRoutes } from "../src/router/routes";
 
 describe("guard", () => {
     test("guardRoute should return true if route has no guards defined", () => {

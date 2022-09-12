@@ -1,5 +1,5 @@
-import { defineRoutes } from "../src/routes";
-import { navigate } from "../src/navigate";
+import { defineRoutes } from "../src/router/routes";
+import { navigate } from "../src/router/navigate";
 
 describe("navigate", () => {
     test("should update location hash for existing route", () => {

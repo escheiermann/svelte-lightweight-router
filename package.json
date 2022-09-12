@@ -3,6 +3,7 @@
   "version": "0.1.2",
   "description": "A lightweight client-side router with guards for the Svelte framework.",
   "main": "src/index.js",
+  "types": "src/types.d.ts", 
   "scripts": {
     "test": "jest --config ./config/jest.config.js"
   },
