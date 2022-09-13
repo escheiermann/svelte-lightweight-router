@@ -24,7 +24,7 @@ export function getRoute(path) {
 /**
  * Sets the route for the current page.
  */
-export function setRoute(event) { 
+export function setRoute() { 
     const newRoute = getRoute(location.hash.substring(1));
     if (newRoute && guardRoute(newRoute)) {
         currentPage.set(newRoute.component);    

@@ -1,0 +1,5 @@
+config
+samples
+test
+src/**/*.svelte
+src/**/*.ts
