@@ -1,4 +1,7 @@
 # svelte-lightweight-router
+
+![Run Tests](https://github.com/escheiermann/svelte-lightweight-router/actions/workflows/main.yml/badge.svg)
+
 A lightweight client-side router with guards for the Svelte framework.
 
 # Getting started
