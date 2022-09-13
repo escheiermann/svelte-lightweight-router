@@ -17,6 +17,11 @@ jobs:
         uses: actions/setup-node@v3.4.1
         with:
           node-version: 16.x
+      
+      - name: Check code formatting
+        run: npm run lint
+        env:
+          CI: true
           
       - name: Install and run tests
         run: |
