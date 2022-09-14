@@ -1,5 +1,7 @@
 # svelte-lightweight-router
 
+[![licence](https://img.shields.io/badge/licence-MIT-blue)](https://github.com/escheiermann/svelte-lightweight-router/blob/main/LICENSE)
+[![npm](https://img.shields.io/badge/npm-v0.1.4-red)](https://www.npmjs.com/package/svelte-lightweight-router/v/0.1.4)
 ![Run Tests](https://github.com/escheiermann/svelte-lightweight-router/actions/workflows/main.yml/badge.svg)
 
 A lightweight client-side router with guards for the Svelte framework.
