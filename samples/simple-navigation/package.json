@@ -19,6 +19,6 @@
   },
   "dependencies": {
     "sirv-cli": "^2.0.0",
-    "svelte-lightweight-router": "^0.1.4"
+    "svelte-lightweight-router": "^0.1.5"
   }
 }
