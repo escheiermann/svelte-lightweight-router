@@ -1,7 +1,6 @@
-import { setRoute } from "./router/routes";
+import { updateRoute } from "./router/routes";
 
-window.onpopstate = setRoute;
+window.onpopstate = updateRoute;
 
-export { defineRoutes } from "./router/routes";
-export { navigate } from "./router/navigate";
+export { defineRoutes, navigate } from "./router/routes";
 export { default } from "./router/Router.svelte";

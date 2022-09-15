@@ -9,7 +9,7 @@ var allRoutes = [];
  */
 export function defineRoutes(routes) {
     allRoutes = routes;
-    setRoute();
+    updateRoute();
 }
 
 /**
@@ -22,11 +22,27 @@ export function getRoute(path) {
 }
 
 /**
+ * Navigates to the specified path.
+ * @param {string} path to the page (e.g "home").
+ */
+export function navigate(path) {
+    const newRoute = getRoute(path);
+    if (newRoute) {
+        location.hash = newRoute.path; 
+    }
+}
+
+/**
  * Sets the route for the current page.
  */
-export function setRoute() { 
+export function updateRoute() { 
     const newRoute = getRoute(location.hash.substring(1));
-    if (newRoute && guardRoute(newRoute)) {
-        currentPage.set(newRoute.component);    
+    if (newRoute) {
+        const guard = guardRoute(newRoute);
+        if (guard === true) {
+            currentPage.set(newRoute.component); 
+        } else if (guard !== false) {
+            navigate(guard);
+        }   
     }
 }

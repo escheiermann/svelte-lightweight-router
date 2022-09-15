@@ -34,13 +34,13 @@ describe("guard", () => {
         expect(guard).toBe(false);
     });
 
-    test("guardRoute should navigate if guards return path", () => {
+    test("guardRoute should return route path if guards return path", () => {
         const expectedPath = "test1";
         const route = {path: expectedPath, guards: [function(path) {return expectedPath}]};
         defineRoutes([route]);
 
-        guardRoute(route);
+        const reroute = guardRoute(route);
 
-        expect(location.hash).toBe("#" + expectedPath);
+        expect(reroute).toBe(expectedPath);
     });
 });
