@@ -1,5 +1,5 @@
-import { getRoute, defineRoutes, updateRoute, navigate } from "../src/router/routes";
-import { currentPage } from "../src/router/page";
+import { getRoute, defineRoutes, updateRoute, navigate } from "../../src/router/routes";
+import { currentPage } from "../../src/router/page";
 import { get } from "svelte/store";
 
 describe("routes", () => {
