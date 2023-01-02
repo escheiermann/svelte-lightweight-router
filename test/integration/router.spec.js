@@ -53,4 +53,19 @@ describe("svlete-lightweight-router", () => {
 
         expect(screen.getByText("TestPage1")).toBeInTheDocument();
     });
+
+    test("should navigate to notFoundRoute when Route has been changed for not existing path", async() => {
+        const routes = [
+            {path: "", component: TestPage1},
+            {path: "test", component: TestPage2}
+        ];
+        const notFoundRoute = {path: "", component: TestPage1};
+        defineRoutes(routes, notFoundRoute);
+
+        navigate("hello");
+        window.dispatchEvent(new Event("popstate"));
+        await tick();
+
+        expect(screen.getByText("TestPage1")).toBeInTheDocument();
+    });
 });

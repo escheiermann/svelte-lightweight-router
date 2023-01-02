@@ -19,6 +19,16 @@ describe("routes", () => {
         expect(actualRoute).toBe(expectedRoute);
     });
 
+    test("getRoute should return errorRoute if path is not defined", () => {
+        const path = "test";
+        const expectedRoute = {path};
+        defineRoutes([expectedRoute, {path: "test2"}], expectedRoute);
+
+        const actualRoute = getRoute("test3");
+
+        expect(actualRoute).toBe(expectedRoute);
+    });
+
     test("updateRoute should update currentPage", () => {
         currentPage.set({});
         const route = {path: "test", component: "TestComponent"};

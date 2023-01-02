@@ -2,13 +2,16 @@ import { currentPage } from "./page";
 import { guardRoute } from "./guard";
 
 var allRoutes = [];
+var errorRoute;
 
 /**
  * Defines and sets up routes for the application.
  * @param routes array containing all application routes. 
+ * @param notFoundRoute route to redirect to if route could not be found. 
  */
-export function defineRoutes(routes) {
+export function defineRoutes(routes, notFoundRoute) {
     allRoutes = routes;
+    errorRoute = notFoundRoute;
     updateRoute();
 }
 
@@ -18,7 +21,8 @@ export function defineRoutes(routes) {
  * @returns route for the specified path.
  */
 export function getRoute(path) {
-    return allRoutes.filter(route => route.path === path)[0];
+    const route = allRoutes.filter(route => route.path === path)[0];
+    return route !== undefined ? route : errorRoute;
 }
 
 /**
