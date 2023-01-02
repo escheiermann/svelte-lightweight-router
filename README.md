@@ -1,7 +1,7 @@
 # svelte-lightweight-router
 
 [![licence](https://img.shields.io/badge/licence-MIT-blue)](https://github.com/escheiermann/svelte-lightweight-router/blob/main/LICENSE)
-[![npm](https://img.shields.io/badge/npm-v0.1.4-red)](https://www.npmjs.com/package/svelte-lightweight-router/v/0.1.4)
+[![npm](https://img.shields.io/badge/npm-v0.1.6-red)](https://www.npmjs.com/package/svelte-lightweight-router/v/0.1.6)
 ![Run Tests](https://github.com/escheiermann/svelte-lightweight-router/actions/workflows/main.yml/badge.svg)
 
 A lightweight client-side router with guards for the Svelte framework.
@@ -85,6 +85,16 @@ The route accepts a array of function references for guarding the route. Each fu
 function authenticate(path) {
   return isLoggedIn ? true : "login";
 }
+```
+
+## Error Route
+
+To reroute the user to a specific page for a route that is not defined, pass a optional route to the `defineRoutes` function.
+
+```javascript
+const notFoundRoute = {path: "error", component: NotFoundPageComponent};
+
+defineRoutes(routes, notFoundRoute);
 ```
 
 ## Code Examples
